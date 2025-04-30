@@ -1,2 +1,1 @@
-# react-shopping-app
-A React shopping app with expert level UI/UX design
+This repository is empty. Any task executed on it should be considered a new capability and needs to be created.
