@@ -1,10 +1,16 @@
 import React from 'react';
 
 const Checkout = () => {
+  const handleCheckout = (e) => {
+    e.preventDefault();
+    alert('Order placed!');
+    // Optionally dispatch action to clear cart
+  };
+
   return (
     <div>
       <h2>Checkout</h2>
-      <form>
+      <form className="checkout-form" onSubmit={handleCheckout}>
         <div>
           <label htmlFor="name">Name:</label>
           <input type="text" id="name" name="name" required />

@@ -19,7 +19,7 @@ const ProductList = () => {
   }, []);
 
   return (
-    <div>
+    <div className="product-list">
       <h1>Product List</h1>
       <div>
         {products.map((product) => (

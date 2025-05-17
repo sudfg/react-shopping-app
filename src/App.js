@@ -5,10 +5,12 @@ import Footer from './components/Footer';
 import ProductList from './components/ProductList';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
+import GlobalStyle from './styles/globalStyles';
 
 function App() {
   return (
-    <div>
+    <>
+      <GlobalStyle />
       <Header />
       <Switch>
         <Route exact path="/" component={ProductList} />
@@ -16,7 +18,7 @@ function App() {
         <Route path="/checkout" component={Checkout} />
       </Switch>
       <Footer />
-    </div>
+    </>
   );
 }
 
