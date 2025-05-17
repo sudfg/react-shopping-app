@@ -1,8 +1,10 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { removeFromCart } from '../actions/cartActions';
 
 const Cart = () => {
   const cart = useSelector(state => state.cart);
+  const dispatch = useDispatch();
 
   return (
     <div className="cart">
@@ -13,6 +15,9 @@ const Cart = () => {
         cart.items.map(item => (
           <div key={item.id} className="cart-item">
             {item.name} - ${item.price}
+            <button onClick={() => dispatch(removeFromCart(item))}>
+              Remove
+            </button>
           </div>
         ))
       )}

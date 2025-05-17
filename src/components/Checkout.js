@@ -1,10 +1,14 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { clearCart } from '../actions/cartActions';
 
 const Checkout = () => {
+  const dispatch = useDispatch();
+
   const handleCheckout = (e) => {
     e.preventDefault();
     alert('Order placed!');
-    // Optionally dispatch action to clear cart
+    dispatch(clearCart());
   };
 
   return (
